@@ -1,9 +1,9 @@
-interface ValentineItemProps { params: Promise<{ product: string }> }
+interface ValentineItemProps { params: Promise<{ slug: string }> }
 const ValentineItem = async ({params} : ValentineItemProps) => {
-        const { product } = await params;
+        const { slug } = await params;
     return (
         <div>
-            {product}
+            {slug}
         </div>
     );
 };

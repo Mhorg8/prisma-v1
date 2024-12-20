@@ -3,19 +3,38 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --black: #353535;
+    --green: #3c6e71;
+    --white: #ffffff;
+    --dark-red: #780000;
+    --red: #c1121f;
+    --cream: #fdf0d5;
+    --success: #a7c957;
+    --soft-green: #9EB7B8;
+    --soft-gray: #d9d9d9;
+    --dark-blue: #003049;
+    --sky-blue: #81c3d7;
+    --soft-blue: #669bbc;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@layer components {
+    .dropdown {
+        @apply flex flex-col gap-1 absolute top-0 right-[130px] md:right-0 md:top-10 bg-white px-2 py-1 rounded-md min-w-[150px] shadow-lg;
+    }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    .dropdown li {
+        @apply cursor-pointer text-sm z-10
+    }
+
+    .secondary-btn {
+        @apply py-2 px-4 rounded-md  flex items-center
+    }
+
+    .mobileMenu {
+        @apply absolute top-0 left-0 w-[70%] h-screen flex flex-col items-center justify-center gap-1 bg-softBlue z-50
+    }
+
+    .header__action-button {
+        @apply bg-Sky-blue text-white flex items-center justify-center px-2 py-2 rounded-md  hover:scale-110 hover:bg-success hover:text-white transition-all duration-200
+    }
 }

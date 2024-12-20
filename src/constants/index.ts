@@ -11,11 +11,11 @@ export  const menuLinks:NavItem[] = [
             {title : "اکشن فیگور" , url : "/products/actionFigors"},
             {title : "تابلو" , url : "/products/posters"},
         ]},
-    {id : 2 , title : "ولنتاین" , url : "/products/Valentine" , subLinks : [
-            {title : "باکس کادو" , url :  "/products/Valentine/boxes"},
-            {title : "عطر و ادکلون" , url :  "/products/Valentine/perfumes"},
-            {title : "شکلات" , url :  "/products/Valentine/shocolates"},
-            {title : "خرس" , url :  "/products/Valentine/bears"},
+    {id : 2 , title : "ولنتاین" , url : "/products/valentine" , subLinks : [
+            {title : "باکس کادو" , url :  "/products/valentine/boxes"},
+            {title : "عطر و ادکلون" , url :  "/products/valentine/perfumes"},
+            {title : "شکلات" , url :  "/products/valentine/shocolates"},
+            {title : "خرس" , url :  "/products/valentine/bears"},
         ]},
     {id : 3 , title : "کریسمس" , url : "/products/holyDay"},
     {id : 4 , title : "دکوراتیو" , url : "/products/decor" , subLinks: [

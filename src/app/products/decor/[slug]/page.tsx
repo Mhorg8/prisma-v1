@@ -1,11 +1,11 @@
 interface DecorItemInterface {
-    params: Promise<{ product: string }>
+    params: Promise<{ slug: string }>
 }
 
 const DecorItem = async ({ params }: DecorItemInterface) => {
-    const { product } = await params;
+    const { slug } = await params;
     return (
-        <div>{product}</div>
+        <div>{slug}</div>
     );
 };
 
