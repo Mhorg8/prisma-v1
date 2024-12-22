@@ -1,13 +1,13 @@
 "use client"
 import Logo from "@/components/Logo";
-import LargeMenu from "@/components/Header/LargeMenu";
-import HeaderAction from "@/components/HeaderAction";
-import MobileMenu from "@/components/Header/MobileMenu";
+import LargeMenu from "@/components/header/LargeMenu";
+import HeaderAction from "@/components/header/HeaderAction";
+import MobileMenu from "@/components/header/MobileMenu";
 
 export const Header = () => {
 
     return (
-        <header className="container py-3 flex items-center justify-between w-full">
+        <header className="container py-3 flex items-center justify-between w-full z-[50]">
             {/*  Logo*/}
             <Logo/>
 

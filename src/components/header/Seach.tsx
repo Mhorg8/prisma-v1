@@ -3,18 +3,18 @@ import {LuSearch} from "react-icons/lu";
 import {motion} from "framer-motion";
 
 interface SearchProps {
-    setSearchOpen: (searchOpen: boolean) => void;
+    searchToggleAction: (searchOpen: boolean) => void;
 }
 
-export const Search = ({setSearchOpen}: SearchProps) => {
+export const Search = ({searchToggleAction}: SearchProps) => {
 
     const handleSearch = () => {
-        setSearchOpen(false);
+        searchToggleAction(false);
     }
 
     return (
         <motion.div initial={{width: 0, opacity: 0}} animate={{width: 250, opacity: 1}}
-                    className="flex items-center justify-between bg-cream rounded-full px-4 ">
+                    className="flex items-center justify-between bg-zinc-200 rounded-full px-4 ">
             <input type="text" placeholder="جستجو ..." name="searchQuery"
                    className="py-2  outline-none bg-transparent text-sm "/>
             <button onClick={handleSearch}>

@@ -5,7 +5,7 @@ import {useState} from "react";
 import {menuLinks} from "@/constants";
 import {FaTimes} from "react-icons/fa";
 import {motion} from "framer-motion";
-import { RiMenuFill} from "react-icons/ri";
+import {RiMenuFill} from "react-icons/ri";
 
 
 export const MobileMenu = () => {
@@ -17,16 +17,17 @@ export const MobileMenu = () => {
     }
 
     return (
-        <div className="block md:hidden">
+        <div className="block md:hidden ">
             <button onClick={() => setOpemMobileMenu(true)}>
-               <RiMenuFill size={24} />
+                <RiMenuFill size={24}/>
             </button>
 
             {opemMobileMenu && <motion.div
                 initial={{x: -200, opacity: 0}}
                 animate={{x: 0, opacity: 1}}
-                className="absolute top-0 left-0 w-[65vw] h-screen bg-Sky-blue">
-                <div className="w-full h-full flex flex-col items-center justify-center gap-y-3 relative">
+                className="absolute top-0 left-0 w-[65vw] h-screen bg-Sky-blue z-[100]">
+                {/*nav menu container*/}
+                <div className="w-full h-full flex flex-col items-center justify-center gap-y-3 ">
 
                     <button onClick={() => setOpemMobileMenu(false)} className="absolute top-8 right-8">
                         <FaTimes size={22} className="text-white hover:scale-110 transition duration-200"/>

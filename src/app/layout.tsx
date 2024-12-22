@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import LocalFont from 'next/font/local'
 import "./globals.css";
-import Header from "@/components/Header/Header";
+import Header from "@/components/header/Header";
 
 const iranSans = LocalFont({
     src: [

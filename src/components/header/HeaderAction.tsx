@@ -3,7 +3,7 @@ import {LuLogIn, LuSearch} from "react-icons/lu";
 import {MdOutlineShoppingBag} from "react-icons/md";
 import {IconType} from "react-icons";
 import {useState} from "react";
-import Search from "@/components/Header/Seach";
+import Search from "@/components/header/Seach";
 import Link from "next/link";
 
 
@@ -12,7 +12,7 @@ export const HeaderAction = () => {
     return (
         <div className="flex items-center gap-x-3 ">
             {/*search input*/}
-            {searchOpen ? <Search setSearchOpen={setSearchOpen}/> :
+            {searchOpen ? <Search searchToggleAction={setSearchOpen}/> :
                 <HeaderActionButton click={() => setSearchOpen(true)} Icon={LuSearch}/>}
             {/* linking to card page*/}
             <HeaderActionButton Icon={MdOutlineShoppingBag}/>
@@ -33,7 +33,7 @@ interface HeaderActionButtonProps {
 const HeaderActionButton = ({Icon, link, path, click}: HeaderActionButtonProps) => {
 
     if (link) {
-        return <Link className="header__action-button" href={path ? path : "/"}>
+        return <Link className="header__action-button" href={path ? path : "/public"}>
             {Icon && <Icon size={20}/>}
         </Link>
     }
