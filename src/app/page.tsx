@@ -12,7 +12,7 @@ export default function Home() {
             <Filter/>
             <Pagination/>
             <SmBanner imageOne="/smBanner1.jpg" imageTwo="/smBanner2.jpg"/>
-            <Slider/>
+            <Slider product={}/>
         </div>
     );
 }

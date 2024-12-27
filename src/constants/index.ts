@@ -87,3 +87,16 @@ export const FilterOptions = [
         ]
     }
 ]
+
+export const tempProducts = [
+    {
+        id: 1,
+        productName: "Rose and white flowerpot",
+        desc: "red rose with white flowerpot it's very good choices for you house.",
+        price: 29,
+        offerPrice: null,
+        rate : 4.5 ,
+        category : "flowers" ,
+        iamge : '/'
+    },
+]
