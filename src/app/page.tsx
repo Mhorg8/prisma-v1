@@ -3,6 +3,8 @@ import Filter from "@/components/Filters/Filter";
 import Pagination from "@/components/Pagination/Pagination";
 import SmBanner from "@/components/SmBanner";
 import Slider from "@/components/Slider";
+import {tempProducts} from "@/constants";
+import ProductCategories from "@/components/ProductCategories";
 
 
 export default function Home() {
@@ -12,7 +14,8 @@ export default function Home() {
             <Filter/>
             <Pagination/>
             <SmBanner imageOne="/smBanner1.jpg" imageTwo="/smBanner2.jpg"/>
-            <Slider product={}/>
+            <Slider products={tempProducts}/>
+            <ProductCategories />
         </div>
     );
 }

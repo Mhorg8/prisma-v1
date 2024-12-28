@@ -9,13 +9,15 @@ import Link from "next/link";
 
 export const HeaderAction = () => {
     const [searchOpen, setSearchOpen] = useState<boolean>(false);
+
+
     return (
-        <div className="flex items-center gap-x-3 ">
+        <div className="flex items-center gap-x-3 relative">
             {/*search input*/}
             {searchOpen ? <Search searchToggleAction={setSearchOpen}/> :
                 <HeaderActionButton click={() => setSearchOpen(true)} Icon={LuSearch}/>}
             {/* linking to card page*/}
-            <HeaderActionButton Icon={MdOutlineShoppingBag}/>
+            <HeaderActionButton Icon={MdOutlineShoppingBag} link path="/card"/>
             {/* linking to auth pages */}
             <HeaderActionButton Icon={LuLogIn}/>
         </div>

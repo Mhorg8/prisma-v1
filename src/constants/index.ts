@@ -1,4 +1,4 @@
-import {HeroInfo, NavItem} from "@/types";
+import {HeroInfo, NavItem, Product} from "@/types";
 
 export const menuLinks: NavItem[] = [
     {
@@ -88,15 +88,71 @@ export const FilterOptions = [
     }
 ]
 
-export const tempProducts = [
+export const tempProducts: Product[] = [
     {
         id: 1,
         productName: "Rose and white flowerpot",
+        founderName: "mohammad hosein",
         desc: "red rose with white flowerpot it's very good choices for you house.",
         price: 29,
-        offerPrice: null,
-        rate : 4.5 ,
-        category : "flowers" ,
-        iamge : '/'
+        offerPercentage: null,
+        rate: 4.5,
+        category: "flowers",
+        image: '/product1.jpg',
+    },
+    {
+        id: 11,
+        productName: "Rose and white flowerpot",
+        founderName: "mohammad hosein",
+        desc: "red rose with white flowerpot it's very good choices for you house.",
+        price: 29,
+        offerPercentage: null,
+        rate: 4.5,
+        category: "flowers",
+        image: '/product2.jpg',
+    },
+    {
+        id: 2,
+        productName: "Rose and white flowerpot",
+        founderName: "mohammad hosein",
+        desc: "red rose with white flowerpot it's very good choices for you house.",
+        price: 29,
+        offerPercentage: null,
+        rate: 4.5,
+        category: "flowers",
+        image: '/product1.jpg',
+    },
+    {
+        id: 3,
+        productName: "Rose and white flowerpot",
+        founderName: "mohammad hosein",
+        desc: "red rose with white flowerpot it's very good choices for you house.",
+        price: 29,
+        offerPercentage: null,
+        rate: 4.5,
+        category: "flowers",
+        image: '/product2.jpg',
+    },
+    {
+        id: 5,
+        productName: "Rose and white flowerpot",
+        founderName: "mohammad hosein",
+        desc: "red rose with white flowerpot it's very good choices for you house.",
+        price: 29,
+        offerPercentage: null,
+        rate: 4.5,
+        category: "flowers",
+        image: '/product1.jpg',
+    },
+    {
+        id: 10,
+        productName: "Rose and white flowerpot",
+        founderName: "mohammad hosein",
+        desc: "red rose with white flowerpot it's very good choices for you house.",
+        price: 29,
+        offerPercentage: null,
+        rate: 4.5,
+        category: "flowers",
+        image: '/product2.jpg',
     },
 ]
