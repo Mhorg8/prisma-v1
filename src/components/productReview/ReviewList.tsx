@@ -1,11 +1,11 @@
 import React from 'react';
-import ProductReviewImage from "@/components/singleProduct/ProductReviewImage";
+import ProductReviewImage from "@/components/productReview/ProductReviewImage";
 import useGenerateStar from "@/app/hooks/useGenerateStar";
 
 const ReviewList = () => {
     return (
-        <div className="w-full h-full flex items-center justify-center min-h-[200px] gap-5 mt-10">
-            <div className="w-fit h-full grid grid-cols-12 grid-rows-2 gap-2">
+        <div className="w-full h-full flex flex-col md:flex-row items-center justify-center min-h-[200px] gap-5 mt-10">
+            <div className="w-fit h-full grid grid-cols-12 grid-rows-2 gap-4 md:gap-2">
                 {/* Review item*/}
                 <ProductReviewImage/>
                 <ProductReviewImage/>

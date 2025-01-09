@@ -8,9 +8,10 @@ import HeadingSection from "@/components/HeadingSection";
 
 interface SliderProps {
     products?: Product[] | null,
+    title?: string
 }
 
-const Slider = ({products}: SliderProps) => {
+const Slider = ({products, title = 'unknown'}: SliderProps) => {
 
     if (!products) {
         return <div className="w-full h-full flex items-center justify-center">
@@ -21,7 +22,7 @@ const Slider = ({products}: SliderProps) => {
 
     return (
         <div className="mt-20 container h-full space-y-5">
-            <HeadingSection title="پر فورش ها"/>
+            <HeadingSection title={title}/>
 
             <motion.div
                 initial={{opacity: 0, y: -20}}

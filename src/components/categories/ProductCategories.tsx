@@ -4,7 +4,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {menuLinks} from "@/constants";
 import 'swiper/css';
 import {Autoplay} from 'swiper/modules';
-import CategoryItemView from "@/components/CategoryItemView";
+import CategoryItemView from "@/components/categories/CategoryItemView";
 
 const ProductCategories = () => {
 

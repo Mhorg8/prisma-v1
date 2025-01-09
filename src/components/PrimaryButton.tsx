@@ -4,12 +4,12 @@ import {IconType} from "react-icons";
 interface PrimaryButtonProps {
     type: "submit" | "button";
     click?: MouseEventHandler<HTMLButtonElement>;
-    text: string; // Added missing `text` prop
-    textColor?: string; // Optional string
-    bgColor?: string; // Optional string
-    Icon?: IconType | null; // Optional icon component
-    IconSize?: number; // Optional number
-    IconColor?: string; // Optional string
+    text: string;
+    textColor?: string;
+    bgColor?: string;
+    Icon?: IconType | null;
+    IconSize?: number;
+    IconColor?: string;
     customStyle?: string
 }
 
@@ -20,7 +20,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = (
         click,
         text,
         textColor = "text-black", // Default text color
-        bgColor , // Default background color
+        bgColor, // Default background color
         Icon,
         IconSize = 16, // Default icon size
         IconColor = "currentColor", // Default icon color

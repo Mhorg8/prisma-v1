@@ -64,11 +64,16 @@
     }
 
     .form__button-back {
-        @apply absolute top-10 -left-7 flex items-center justify-center w-10 h-10 rounded-full border border-black
+        @apply absolute left-3 top-0 md:top-10 md:-left-7 lg:left-3 flex items-center justify-center w-10 h-10 rounded-full border border-black
     }
+
     .privacy-text a {
         text-decoration: underline;
         cursor: pointer;
+    }
+
+    .social__icon {
+        @apply hover:scale-110  transition-all duration-200 text-green cursor-pointer hover:text-success
     }
 
     .vertical-row {
@@ -99,6 +104,34 @@
             border-radius: 2px;
         }
     }
+
+    .form__input-container {
+        @apply w-full flex flex-col items-start justify-center border-gray-200
+    }
+
+    .input {
+        width: 100%;
+        padding: 16px 8px;
+        border-radius: 15px;
+        border: 1px solid #E5E4E2;
+        transition: all 0.1ms ease-in;
+
+        &:focus {
+            box-shadow: 0px 0px 6px 3px #D0F0C0;
+            outline: 1px solid #93C572;
+            cursor: text;
+        }
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 4px 2px #D0F0C0;
+        }
+    }
+
+    .product__image {
+        @apply object-cover rounded-lg shadow-md cursor-pointer hover:shadow-md
+    }
+
 }
 
 @layer base {

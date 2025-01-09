@@ -6,7 +6,7 @@ const fadeInVariants = {
     hidden: {opacity: 0, backgroundColor: "#fff"},
     visible: (index: number) => ({
         opacity: 1,
-        backgroundColor: "#a7c957",
+        backgroundColor: "#81c3d7",
         transition: {
             delay: index * 0.1,
             duration: 0.3,

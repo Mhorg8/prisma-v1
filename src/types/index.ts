@@ -28,6 +28,29 @@ export interface Product {
     desc: string;
     image: string;
     offerPercentage: number | null;
-    rate : number | null;
+    rate: number | null;
     category: string;
 }
+
+export interface FooterItem {
+    id: number,
+    title: string,
+    subLinks: {
+        text: string, path: string
+    }[]
+}
+
+export interface FilterOption {
+    id: number,
+    placeHolder: string,
+    title: string,
+    options: {
+        label: string, value: string
+    }[]
+}
+
+export  interface  AccordionItem {
+    title: string;
+    content: string;
+}
+

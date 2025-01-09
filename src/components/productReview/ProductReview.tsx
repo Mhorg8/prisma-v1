@@ -1,4 +1,4 @@
-import ReviewList from "@/components/singleProduct/ReviewList";
+import ReviewList from "@/components/productReview/ReviewList";
 
 const ProductReview = () => {
     return (

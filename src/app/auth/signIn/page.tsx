@@ -1,17 +1,52 @@
-import React from 'react';
+"use client"
+import PrimaryButton from "@/components/PrimaryButton";
+import {FcGoogle} from "react-icons/fc";
+import VideoContainer from "@/components/VideoContainer";
+import {useState} from "react";
+import {FaChevronLeft} from "react-icons/fa6";
+import SignInForm from "@/components/SignInForm";
 
-const SignInPage = () => {
+const SignUpPage = () => {
+    const [showForm, setShowForm] = useState<boolean>(false);
+
     return (
-        <div className="w-full grid grid-cols-12">
-            {/*  FORM  */}
-            <div className="col-span-12 md:col-span-9 flex flex-col items-start bg-red">
-                <div className="w-[370px] h-full">
-                    <h1>ثبت نام در پریسما</h1>
-                    <button></button>
+        <div className="w-full flex items-center h-[calc(100dvh-90px)]">
+            {/*  main  */}
+            <main
+                className="flex-1 w-full lg:w-[575px] flex items-center justify-center xl:justify-end xl:pl-[160px] h-full">
+
+                <div className="w-full xl:w-[420px] h-full flex flex-col items-center justify-center relative">
+                    {/* back button */}
+                    {showForm && <button
+                        className="form__button-back"
+                        onClick={() => setShowForm(false)}><FaChevronLeft/>
+                    </button>}
+
+                    <h1 className="text-2xl font-semibold">ثبت نام در پریسما</h1>
+                    {/* sign in options */}
+                    <div className="mt-6 w-full px-10 xl:px-0">
+                        <PrimaryButton
+                            type="button"
+                            text="Sign up with Google"
+                            customStyle="py-4 rounded-full font-bold text-base gap-4 md:w-[420px] border broder-gray-500 hover:bg-success"
+                            Icon={FcGoogle}
+                            IconSize={22}
+                            textColor="text-black"
+                            bgColor="bg-white"
+                        />
+                        {/* vertical row */}
+                        <div className="vertical-row text-zinc-500">Or</div>
+
+                    </div>
+                    <SignInForm/>
                 </div>
-            </div>
+            </main>
+            {/*  video container  */}
+            <aside className="hidden md:block w-[400px] lg:w-[450px] h-full relative">
+                <VideoContainer/>
+            </aside>
         </div>
     );
 };
 
-export default SignInPage;
+export default SignUpPage;

@@ -16,9 +16,15 @@ export const LargeMenu = () => {
                 <div key={link.id} className="relative ">
                     {/*title and chevron icon*/}
                     <div className="flex items-center gap-x-2">
-                        <span onClick={() => handleDropdown(link.id)}
-                              className="cursor-pointer hover:text-darkBlue">{link.title}
-                        </span>
+                        {link.subLinks ?
+                            <span onClick={() => handleDropdown(link.id)}
+                                  className="cursor-pointer hover:text-darkBlue">{link.title}
+                            </span> :
+                            //  if navItem dont have subLink this should be generate
+                            <Link href={link.url}
+                                  className="cursor-pointer hover:text-darkBlue">{link.title}
+                            </Link>}
+
                         {link.subLinks && <FaChevronDown size={10}/>}
                     </div>
 

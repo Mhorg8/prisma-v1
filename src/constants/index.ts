@@ -1,17 +1,8 @@
-import {HeroInfo, NavItem, Product} from "@/types";
+import {AccordionItem, FilterOption, FooterItem, HeroInfo, NavItem, Product} from "@/types";
 
 export const menuLinks: NavItem[] = [
     {
-        id: 1, title: "محصولات", url: "/products", subLinks: [
-            {title: "میز و صندلی", url: "/products/tables"},
-            {title: "کتاب", url: "/products/books"},
-            {title: "شلف دیواری", url: "/products/shelfs"},
-            {title: "آیینه", url: "/products/mirrors"},
-            {title: "گل و گیاه", url: "/products/flowers"},
-            {title: "قاب گوشی", url: "/products/phoneCases"},
-            {title: "اکشن فیگور", url: "/products/actionFigors"},
-            {title: "تابلو", url: "/products/posters"},
-        ]
+        id: 1, title: "محصولات", url: "/products",
     },
     {
         id: 2, title: "ولنتاین", url: "/products/valentine", subLinks: [
@@ -27,14 +18,13 @@ export const menuLinks: NavItem[] = [
             {title: "میز و صندلی", url: "/products/decor/tables"},
             {title: "کتاب", url: "/products/decor/books"},
             {title: "آیینه", url: "/products/decor/mirrors"},
-            {title: "گل و گیاه", url: "/products/decor/flowers"},
+            {title: "گل و گیاه", url: "/products/decor"},
             {title: "تابلو", url: "/products/decor/posters"},
             {title: "امشن فیگور", url: "/products/decor/actionFigure"},
         ]
     },
     {id: 5, title: "روشنایی", url: "/products/lamps"},
 ]
-
 export const heroInfo: HeroInfo[] = [
     {
         id: 1,
@@ -55,8 +45,7 @@ export const heroInfo: HeroInfo[] = [
         image: "/hero-3.jpg"
     },
 ]
-
-export const FilterOptions = [
+export const FilterOptions: FilterOption[] = [
     {
         id: 1, placeHolder: "براساس قیمت", title: "price", options: [
             {label: "گرانترین", value: "expansive"},
@@ -87,7 +76,6 @@ export const FilterOptions = [
         ]
     }
 ]
-
 export const tempProducts: Product[] = [
     {
         id: 1,
@@ -155,4 +143,52 @@ export const tempProducts: Product[] = [
         category: "flowers",
         image: '/product2.jpg',
     },
+]
+export const footerLinks: FooterItem[] = [
+    {
+        id: 1, title: "درباره ما", subLinks: [
+            {text: "پروزه ها", path: "/"},
+            {text: "آدرس", path: "/"},
+            {text: "راه های ارتباطی", path: "/"},
+            {text: "همکارای با ما", path: "/"},
+        ]
+    },
+    {
+        id: 2, title: "محصولات", subLinks: [
+            {text: "ولنتاین", path: "/"},
+            {text: "دکوراتیو", path: "/"},
+            {text: "کریسمس", path: "/"},
+            {text: "روشنایی", path: "/"},
+            {text: "تابلو", path: "/"},
+            {text: "میز و صندلی", path: "/"},
+        ]
+    },
+
+    {
+        id: 3, title: "پشتیبانی", subLinks: [
+            {text: "راهنمایی مرجع کردن", path: "/"},
+            {text: "راهنمایی ثبت سفارش کردن", path: "/"},
+            {text: "کد تخفیف", path: "/"},
+            {text: "حمل نقل", path: "/"},
+            {text: "پیگیری سفارش", path: "/"},
+        ],
+    },
+]
+export const accordionItems: AccordionItem[] = [
+    {
+        title: "درباره ما",
+        content: "ما مجموعه‌ای گسترده از لوازم خانگی باکیفیت را ارائه می‌دهیم که طراحی شده‌اند تا زیبایی و کارایی را به فضای شما اضافه کنند. افتخار ما ارائه محصولات منحصربه‌فرد برای هر سلیقه‌ای است."
+    },
+    {
+        title: "محصولات ما",
+        content: "از دکورهای مدرن گرفته تا ملزومات کلاسیک، همه چیزهایی که برای زیباسازی خانه خود نیاز دارید را در فروشگاه ما پیدا خواهید کرد."
+    },
+    {
+        title: "خدمات مشتریان",
+        content: "تیم پشتیبانی ما آماده است تا در تمام مراحل خرید، از انتخاب محصول تا تحویل آن، به شما کمک کند."
+    },
+    {
+        title: "تماس با ما",
+        content: "برای سوالات بیشتر یا اطلاعات تماس، لطفاً با شماره‌های ما تماس بگیرید یا به فروشگاه ما مراجعه کنید."
+    }
 ]

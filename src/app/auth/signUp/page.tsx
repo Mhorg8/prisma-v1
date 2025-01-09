@@ -8,7 +8,7 @@ import SignUpForm from "@/components/SignUpForm";
 import {FaChevronLeft} from "react-icons/fa6";
 
 const SignUpPage = () => {
-    const [showForm, setShowForm] = useState<boolean>(true);
+    const [showForm, setShowForm] = useState<boolean>(false);
 
     return (
         <div className="w-full flex items-center h-[calc(100dvh-90px)]">
@@ -45,11 +45,11 @@ const SignUpPage = () => {
                                 Settings</Link>.
                             </p>
                             <div className="text-base text-black flex items-center gap-x-1 w-full justify-center mt-2">
-                                <button className="underline">Sign In</button>
-                                <p>?Already have an account</p>
+                                <p>آیا حساب کاربری دارید ؟</p>
+                                <Link href='/auth/signIn' className="underline">وارد شوید</Link>
                             </div>
                         </div>
-                    </div> : <SignUpForm/>}
+                    </div> : <SignUpForm formStatus={showForm}/>}
                 </div>
             </main>
             {/*  video container  */}

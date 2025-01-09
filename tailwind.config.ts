@@ -21,14 +21,14 @@ export default {
     			green: '#3c6e71',
     			white: '#ffffff',
     			red: '#c1121f',
-    			'darkRed': '#780000',
-    			'cream': '#fdf0d5',
-    			'success': '#a7c957',
-    			'softGreen': '#a7c957',
-    			'softGray': '#9EB7B8',
-    			'darkBlue': '#003049',
+    			darkRed: '#780000',
+    			cream: '#fdf0d5',
+    			success: '#a7c957',
+    			softGreen: '#a7c957',
+    			softGray: '#9EB7B8',
+    			darkBlue: '#003049',
     			'Sky-blue': '#81c3d7',
-    			'softBlue': '#669bbc',
+    			softBlue: '#669bbc',
     			background: 'hsl(var(--background))',
     			foreground: 'hsl(var(--foreground))',
     			card: {
@@ -74,6 +74,28 @@ export default {
     			lg: 'var(--radius)',
     			md: 'calc(var(--radius) - 2px)',
     			sm: 'calc(var(--radius) - 4px)'
+    		},
+    		keyframes: {
+    			'accordion-down': {
+    				from: {
+    					height: '0'
+    				},
+    				to: {
+    					height: 'var(--radix-accordion-content-height)'
+    				}
+    			},
+    			'accordion-up': {
+    				from: {
+    					height: 'var(--radix-accordion-content-height)'
+    				},
+    				to: {
+    					height: '0'
+    				}
+    			}
+    		},
+    		animation: {
+    			'accordion-down': 'accordion-down 0.2s ease-out',
+    			'accordion-up': 'accordion-up 0.2s ease-out'
     		}
     	}
     },

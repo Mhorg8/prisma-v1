@@ -1,7 +1,7 @@
 "use client"
 import {motion} from "framer-motion";
 import {AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
-import {AccordionItem as AccordionItemType} from "@/types/index"
+import {AccordionItem as AccordionItemType} from "@/types"
 
 
 interface AccordionItemProps {
@@ -25,7 +25,7 @@ const AccordionItemView = ({item, index}: AccordionItemProps) => {
             }
         })
     }
-    
+
     return (
         <motion.div
             variants={animationVariants}

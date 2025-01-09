@@ -11,7 +11,7 @@ const ProductOverlay = () => {
                 lorem ipsum dolor sit amet, consectetur , lorem ipsum ,a
                 lorem ipsum dolor sit amet, consectetur , lorem ipsum ,a
             </p>
-            <SecondaryButton text=" بررسی" path="/product/21312312"/>
+            <SecondaryButton text=" بررسی" path="/Product/21312312"/>
         </div>
     );
 };

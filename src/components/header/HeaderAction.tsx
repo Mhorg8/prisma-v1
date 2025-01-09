@@ -19,7 +19,7 @@ export const HeaderAction = () => {
             {/* linking to card page*/}
             <HeaderActionButton Icon={MdOutlineShoppingBag} link path="/card"/>
             {/* linking to auth pages */}
-            <HeaderActionButton Icon={LuLogIn}/>
+            <HeaderActionButton Icon={LuLogIn} link path="/auth/signUp"/>
         </div>
     );
 };
