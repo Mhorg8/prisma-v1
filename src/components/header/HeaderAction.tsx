@@ -1,15 +1,16 @@
 "use client"
-import {LuLogIn, LuSearch} from "react-icons/lu";
+import {LuLogIn, LuSearch, LuUser} from "react-icons/lu";
 import {MdOutlineShoppingBag} from "react-icons/md";
 import {IconType} from "react-icons";
 import {useState} from "react";
 import Search from "@/components/header/Seach";
 import Link from "next/link";
+import {useSession} from "next-auth/react";
 
 
 export const HeaderAction = () => {
     const [searchOpen, setSearchOpen] = useState<boolean>(false);
-
+    const {data: session} = useSession()
 
     return (
         <div className="flex items-center gap-x-3 relative">
@@ -19,7 +20,8 @@ export const HeaderAction = () => {
             {/* linking to card page*/}
             <HeaderActionButton Icon={MdOutlineShoppingBag} link path="/card"/>
             {/* linking to auth pages */}
-            <HeaderActionButton Icon={LuLogIn} link path="/auth/signUp"/>
+            <HeaderActionButton Icon={session?.user ? LuUser : LuLogIn} link
+                                path={session?.user ? '/profile' : `/auth/signUp`}/>
         </div>
     );
 };

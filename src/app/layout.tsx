@@ -3,6 +3,7 @@ import LocalFont from 'next/font/local'
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import {SessionProvider} from "next-auth/react";
 
 const iranSans = LocalFont({
     src: [
@@ -49,13 +50,16 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" dir="rtl">
-        <body
-            className={`${iranSans.className} `}
-        >
-        <Header />
-        {children}
-        <Footer />
-        </body>
+        <SessionProvider>
+
+            <body
+                className={`${iranSans.className} `}
+            >
+            <Header/>
+            {children}
+            <Footer/>
+            </body>
+        </SessionProvider>
         </html>
     );
 }

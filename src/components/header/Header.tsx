@@ -9,7 +9,7 @@ export const Header = () => {
 
     return (
         <>
-            <TopHeader />
+            <TopHeader/>
             <header className="container py-3 flex items-center justify-between w-full z-[50] relative">
 
                 {/*  Logo*/}
@@ -17,9 +17,9 @@ export const Header = () => {
                 <div className=" md:flex hidden items-center justify-between w-full">
                     {/*    Large menu */}
                     <LargeMenu/>
-                   <div className="hidden lg:flex">
-                       <HeaderAction/>
-                   </div>
+                    <div className="hidden lg:flex">
+                        <HeaderAction/>
+                    </div>
                 </div>
 
                 {/*  mobile menu*/}
